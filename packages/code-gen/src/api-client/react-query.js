@@ -484,7 +484,8 @@ export function reactQueryGenerateFunction(
 
     fileWrite(
       file,
-      `// Only the key and function: the options are typed for the unselected response, the hook for TData.
+      `// Only the key and function: the options are typed for the unselected response,
+// the hook for TData.
 const { queryKey, queryFn } = ${fnBaseName}QueryOptions(${apiInstanceParameter} opts);
 return useQuery({ queryKey, queryFn, ...opts?.queryOptions });`,
     );
